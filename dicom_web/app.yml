@@ -1,19 +1,14 @@
 command: 
   - "hypercorn"
   - "app:app"
-
 env:
   # ── Required ────────────────────────────────────────────────────────────────
   - name: "DICOMWEB_GATEWAY_URL"
-    value: "https://<your-gateway-app-name>.databricksapps.com"
+    value: "https://pixels-dicomweb-gateway-7405613569486293.13.azure.databricksapps.com"
   - name: "DATABRICKS_WAREHOUSE_ID"
     valueFrom: "sql_warehouse"
   - name: "DATABRICKS_PIXELS_TABLE"
-    value: "{PIXELS_TABLE}"
-
-  # ── MONAI serving ───────────────────────────────────────────────────────────
-  - name: "MONAI_SERVING_ENDPOINT"
-    valueFrom: "serving_endpoint"
+    value: "dap_project_3897cc.pixels.dicom_metadata"
 
   # ── Authentication ──────────────────────────────────────────────────────────
   - name: "DICOMWEB_USE_USER_AUTH"

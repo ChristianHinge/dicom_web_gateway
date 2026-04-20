@@ -1,7 +1,7 @@
 fastapi
 uvicorn
 databricks-sdk==0.88.0
-./pixels
+./databricks_pixels-3.0.0-py3-none-any.whl
 databricks-sql-connector>=3.0.0
 requests
 psycopg2-binary
